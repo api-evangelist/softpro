@@ -1,0 +1,79 @@
+aid: softpro
+name: SoftPro
+review:
+  question: Does SoftPro expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. SoftPro does not publish any public API,
+    and there is no evidence of a server-push transport (WebSocket or SSE) on any
+    SoftPro surface. SoftPro 360 integration is a partner-gated web-service
+    exchange whose transport, endpoints, and authentication are shared only with
+    onboarded vendors under agreement; there is no publicly documented realtime
+    or bidirectional channel to model.
+findings:
+  summary: |
+    SoftPro does not publish a documented public WebSocket API. SoftPro is title,
+    escrow, and real estate closing software. Third-party integration happens
+    through SoftPro 360, a vendor marketplace built into the SoftPro product where
+    users order title/escrow/closing services from 100+ integrated providers and
+    order data flows back into the SoftPro file. Public marketing and support
+    material confirm that provider integrations authenticate with SoftPro 360 API
+    keys (for example, entering a provider's full-access API key under 360 >
+    Services), but the underlying web-service endpoints, payload schemas, protocol
+    (REST vs SOAP), and base URLs are not publicly documented - they are shared
+    only with approved partners under agreement. A SoftPro documents/API portal
+    exists at docs-api.softprocorp.com, but it immediately redirects to
+    authentication and returns no public content. No WebSocket (ws:// or wss://)
+    endpoint is documented anywhere on any SoftPro property as of the review date.
+  accessModel: |
+    Partner-gated. Vendors join by submitting a "Become a Partner" request; there
+    is no open, self-service developer signup, no public API reference, and no
+    public OpenAPI. Consumers connect an approved provider by entering an API key
+    the provider issues. The SoftPro 360 portal itself is included free with
+    SoftPro software; individual services ordered through it are billed a la carte
+    by the respective providers. SoftPro software licensing is quote-based
+    (contact sales at sales@softprocorp.com / 800-848-0143).
+  transports:
+    - protocol: Web Service (partner-gated)
+      scheme: https
+      documented: false
+      note: SoftPro 360 integration is an API-key-authenticated web service exposed only to onboarded partners; endpoints and schemas are not public.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented on any SoftPro property as of the review date.
+  endpointsModeled: true
+  endpointsConfirmedRest: []
+sources:
+  - url: https://www.softprocorp.com/real-estate-software-solutions/softpro-360-data-integration/
+    type: Documentation
+    note: SoftPro 360 marketplace overview - 100+ integrated providers, order data flows back into the SoftPro file, "Become a Partner" call to action. No endpoints published.
+  - url: https://info.softprocorp.com/resources-for-softpro-sync-integration-in-softpro-360
+    type: Documentation
+    note: SoftPro Sync requestor/provider model; provider onboarding by request. No technical/auth reference.
+  - url: https://info.softprocorp.com/get-started-with-softpro-360
+    type: Documentation
+    note: Getting-started material for SoftPro 360 users. Functional, not developer-facing.
+  - url: https://docs-api.softprocorp.com/
+    type: APIReference
+    note: SoftPro documents/API portal that redirects to authentication and returns no public content.
+  - url: https://help.softprocorp.com/
+    type: Documentation
+    note: SoftPro help portal and 360 application guides - end-user guidance, not an API reference.
+  - url: https://support.proof.com/hc/en-us/articles/6934762785175-SoftPro-integration-setup-instructions
+    type: Documentation
+    note: Third-party (Proof) setup guide describing entering an API key under SoftPro 360 > Services to connect a provider; confirms API-key auth model without exposing endpoints.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    SoftPro publishes no public WebSocket API and no public HTTP API reference.
+    Integration is a partner-gated, API-key-authenticated web service whose
+    surface is disclosed only to onboarded vendors. The apis.yml entry documents
+    SoftPro honestly as a gated provider with two modeled integration surfaces
+    (SoftPro 360 Integration and SoftPro Sync) flagged endpointsModeled; no
+    AsyncAPI, OpenAPI, plans, rate-limits, or finops artifacts were fabricated
+    because no public sourced detail exists.

@@ -1,0 +1,85 @@
+aid: softpro
+url: https://raw.githubusercontent.com/api-evangelist/softpro/refs/heads/main/apis.yml
+name: SoftPro
+kind: company
+description: SoftPro is the market-leading provider of title, escrow, and real estate
+  closing software, used by title agents, escrow officers, and closing attorneys to
+  produce settlement documents, manage closing files, and disburse funds. SoftPro 360
+  is its integrated vendor marketplace, a business exchange built into the SoftPro
+  desktop and hosted products that lets users order title, escrow, and closing
+  products and services - e-recording, closing protection letters and policy jackets,
+  remote online notarization, eClosings, lien releases, property records, tax
+  certificates, identity verification, and wire-fraud protection - from 100+ integrated
+  service providers without leaving their SoftPro file, with order data flowing
+  automatically back into the file. Partner and vendor integration with SoftPro 360
+  is delivered through a partner-gated web-service integration secured with API keys;
+  SoftPro does not publish an open, self-service developer API or public API reference.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Title Insurance
+- Escrow
+- Real Estate Closing
+- Settlement
+- Title Production
+- SoftPro 360
+- Integration Marketplace
+- Partner API
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+apis:
+- aid: softpro:softpro-360-integration-api
+  name: SoftPro 360 Integration API
+  tags:
+  - SoftPro 360
+  - Integration Marketplace
+  - Partner API
+  - Orders
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.softprocorp.com/real-estate-software-solutions/softpro-360-data-integration/
+  properties:
+  - url: https://www.softprocorp.com/real-estate-software-solutions/softpro-360-data-integration/
+    type: Documentation
+  - url: https://www.softprocorp.com/become-a-partner/
+    type: SignUp
+  description: Partner-gated web-service integration behind the SoftPro 360 vendor
+    marketplace. Approved providers exchange closing, title, and escrow order data
+    (orders, requests, status updates, and returned documents) with a customer's
+    SoftPro file, authenticated with SoftPro 360 API keys. The endpoint surface,
+    payload schemas, and authentication details are provided only to onboarded
+    partners under agreement - there is no public API reference or OpenAPI, so this
+    entry is modeled from public marketplace descriptions rather than sourced
+    endpoint documentation (endpointsModeled).
+- aid: softpro:softpro-sync-api
+  name: SoftPro Sync API
+  tags:
+  - SoftPro Sync
+  - Provider Network
+  - Title Search
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://info.softprocorp.com/resources-for-softpro-sync-integration-in-softpro-360
+  properties:
+  - url: https://info.softprocorp.com/resources-for-softpro-sync-integration-in-softpro-360
+    type: Documentation
+  description: SoftPro Sync connects two SoftPro customers through SoftPro 360 - one
+    acting as requestor and the other as provider - so a requestor can order services
+    such as title searches directly from another SoftPro customer without rekeying
+    file data. Provider onboarding is by request; no public endpoint or authentication
+    reference is published, so this entry is modeled from public descriptions
+    (endpointsModeled).
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/softpro
+- type: Website
+  url: https://www.softprocorp.com/
+- type: Documentation
+  url: https://help.softprocorp.com/
+- type: SignUp
+  url: https://www.softprocorp.com/become-a-partner/
+- type: Support
+  url: https://www.softprocorp.com/support/
+- url: https://blog.softprocorp.com/
+  type: Blog
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
