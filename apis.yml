@@ -68,6 +68,8 @@ apis:
     reference is published, so this entry is modeled from public descriptions
     (endpointsModeled).
 common:
+- type: DomainSecurity
+  url: security/softpro-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/softpro
 - type: Website
