@@ -31,17 +31,7 @@ SoftPro does **not** publish an open, self-service developer API or a public API
 
 ## APIs (modeled - partner-gated)
 
-### SoftPro 360 Integration API
 
-Partner-gated web-service integration behind the SoftPro 360 vendor marketplace. Approved providers exchange closing, title, and escrow order data (orders, requests, status updates, and returned documents) with a customer's SoftPro file, authenticated with SoftPro 360 API keys. Endpoint surface and schemas are provided only to onboarded partners; modeled from public descriptions.
-
-- **Human URL:** [https://www.softprocorp.com/real-estate-software-solutions/softpro-360-data-integration/](https://www.softprocorp.com/real-estate-software-solutions/softpro-360-data-integration/)
-
-### SoftPro Sync API
-
-SoftPro Sync connects two SoftPro customers through SoftPro 360 - one acting as requestor and the other as provider - so a requestor can order services such as title searches directly from another SoftPro customer without rekeying file data. Provider onboarding is by request; modeled from public descriptions.
-
-- **Human URL:** [https://info.softprocorp.com/resources-for-softpro-sync-integration-in-softpro-360](https://info.softprocorp.com/resources-for-softpro-sync-integration-in-softpro-360)
 
 ## Pricing
 
