@@ -3,6 +3,17 @@ url: https://raw.githubusercontent.com/api-evangelist/softpro/refs/heads/main/ap
 name: SoftPro
 kind: company
 description: SoftPro is the market-leading provider of title, escrow, and real estate closing software, used by title agents, escrow officers, and closing attorneys to produce settlement documents, manage closing files, and disburse funds. SoftPro 360 is its integrated vendor marketplace, a business exchange built into the SoftPro desktop and hosted products that lets users order title, escrow, and closing products and services - e-recording, closing protection letters and policy jackets, remote online notarization, eClosings, lien releases, property records, tax certificates, identity verification, and wire-fraud protection - from 100+ integrated service providers without leaving their SoftPro file, with order data flowing automatically back into the file. Partner and vendor integration with SoftPro 360 is delivered through a partner-gated web-service integration secured with API keys; SoftPro does not publish an open, self-service developer API or public API reference.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
