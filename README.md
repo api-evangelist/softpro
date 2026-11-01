@@ -1,4 +1,4 @@
-# SoftPro (softpro)
+# SoftPro
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,53 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-SoftPro is the market-leading provider of title, escrow, and real estate closing software, used by title agents, escrow officers, and closing attorneys to produce settlement documents, manage closing files, and disburse funds. **SoftPro 360** is its integrated vendor marketplace - a business exchange built into the SoftPro desktop and hosted products that lets users order title, escrow, and closing products and services (e-recording, closing protection letters and policy jackets, remote online notarization, eClosings, lien releases, property records, tax certificates, identity verification, and wire-fraud protection) from 100+ integrated service providers without leaving their SoftPro file, with order data flowing automatically back into the file.
+SoftPro is the market-leading provider of title, escrow, and real estate closing software, used by title agents, escrow officers, and closing attorneys to produce settlement documents, manage closing files, and disburse funds. SoftPro 360 is its integrated vendor marketplace, a business exchange built into the SoftPro desktop and hosted products that lets users order title, escrow, and closing products and services - e-recording, closing protection letters and policy jackets, remote online notarization, eClosings, lien releases, property records, tax certificates, identity verification, and wire-fraud protection - from 100+ integrated service providers without leaving their SoftPro file, with order data flowing automatically back into the file. Partner and vendor integration with SoftPro 360 is delivered through a partner-gated web-service integration secured with API keys; SoftPro does not publish an open, self-service developer API or public API reference.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/softpro/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/softpro/refs/heads/main/apis.yml)
+**Areas:** Title Insurance · Escrow · Real Estate Closing · Settlement · Title Production · SoftPro 360 · Integration Marketplace · Partner API
 
-## Access Model (Important)
+## SoftPro on APIs.io
 
-SoftPro does **not** publish an open, self-service developer API or a public API reference. This entry is an honest, partner-gated stub:
+Everything profiled for SoftPro is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/softpro/](https://apis.io/providers/softpro/)** — or go straight to one of the APIs or properties below.
 
-- **Integration is partner-gated.** Vendors join the SoftPro 360 marketplace by submitting a [Become a Partner](https://www.softprocorp.com/become-a-partner/) request. There is no public developer signup.
-- **Authentication is by API key.** Approved providers exchange order data with a customer's SoftPro file over a web service, and consumers connect a provider by entering the provider-issued API key under `360 > Services`. This confirms an API-key-authenticated web service, but the endpoints, payload schemas, protocol (REST vs SOAP), and base URLs are shared only with onboarded partners under agreement.
-- **No public reference or OpenAPI.** A documents/API portal exists at `docs-api.softprocorp.com`, but it redirects to authentication and returns no public content. The [help portal](https://help.softprocorp.com/) contains end-user 360 application guides, not a developer API reference.
-- **Modeled, not sourced.** The API entries below are **modeled** (`endpointsModeled`) from public marketplace descriptions. No endpoint surface, OpenAPI, plans, rate-limits, or FinOps artifacts have been fabricated.
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Title Insurance
-- Escrow
-- Real Estate Closing
-- Settlement
-- Title Production
-- SoftPro 360
-- Integration Marketplace
-- Partner API
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
+- [Softpro Domain Security](https://apis.io/security/softpro/softpro-domain-security/)
 
-## APIs (modeled - partner-gated)
+## Where to find this API
 
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-
-## Pricing
-
-The SoftPro 360 marketplace is included free with SoftPro software; individual services ordered through it are billed a la carte by the respective providers. SoftPro software licensing is quote-based - contact sales at sales@softprocorp.com or 800-848-0143. No public pricing/plans document is available to source.
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/softpro)
 - [Website](https://www.softprocorp.com/)
 - [Documentation](https://help.softprocorp.com/)
-- [Become a Partner (Sign Up)](https://www.softprocorp.com/become-a-partner/)
+- [Sign up](https://www.softprocorp.com/become-a-partner/)
 - [Support](https://www.softprocorp.com/support/)
 - [Blog](https://blog.softprocorp.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.1** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 13.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.3** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/softpro/](https://apis.io/providers/softpro/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for SoftPro: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/softpro/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
